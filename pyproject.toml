@@ -41,19 +41,35 @@ build = [
 zip-safe = false
 include-package-data = true
 packages = [
-    "deutsch-jozsa.qiskit",
-    "bernstein-vazirani.qiskit",
-    "hidden-shift.qiskit",
-    "quantum-fourier-transform.qiskit",
-    "grovers.qiskit",
-    "phase-estimation.qiskit",
-    "hhl.qiskit",
-    "amplitude-estimation.qiskit",
-    "monte-carlo.qiskit",
-    "hamiltonian-simulation.qiskit",
-    "vqe.qiskit",
-    "shors.qiskit",
+    "qc_app_benchmarks.common",
+    "qc_app_benchmarks.deutsch_jozsa.qiskit",
+    "qc_app_benchmarks.bernstein_vazirani.qiskit",
+    "qc_app_benchmarks.hidden_shift.qiskit",
+    "qc_app_benchmarks.quantum_fourier_transform.qiskit",
+    "qc_app_benchmarks.grovers.qiskit",
+    "qc_app_benchmarks.phase_estimation.qiskit",
+    "qc_app_benchmarks.hhl.qiskit",
+    "qc_app_benchmarks.amplitude_estimation.qiskit",
+    "qc_app_benchmarks.monte_carlo.qiskit",
+    "qc_app_benchmarks.hamiltonian_simulation.qiskit",
+    "qc_app_benchmarks.vqe.qiskit",
+    "qc_app_benchmarks.shors.qiskit"
 ]
+
+[tool.setuptools.package-dir]
+"qc_app_benchmarks.common" = "_common"
+"qc_app_benchmarks.deutsch_jozsa.qiskit" = "deutsch-jozsa/qiskit"
+"qc_app_benchmarks.bernstein_vazirani.qiskit" = "bernstein-vazirani/qiskit"
+"qc_app_benchmarks.hidden_shift.qiskit" = "hidden-shift/qiskit"
+"qc_app_benchmarks.quantum_fourier_transform.qiskit" = "quantum-fourier-transform/qiskit"
+"qc_app_benchmarks.grovers.qiskit" = "grovers/qiskit"
+"qc_app_benchmarks.phase_estimation.qiskit" = "phase-estimation/qiskit"
+"qc_app_benchmarks.hhl.qiskit" = "hhl/qiskit"
+"qc_app_benchmarks.amplitude_estimation.qiskit" = "amplitude-estimation/qiskit"
+"qc_app_benchmarks.monte_carlo.qiskit" = "monte-carlo/qiskit"
+"qc_app_benchmarks.hamiltonian_simulation.qiskit" = "hamiltonian-simulation/qiskit"
+"qc_app_benchmarks.vqe.qiskit" = "vqe/qiskit"
+"qc_app_benchmarks.shors.qiskit" = "shors/qiskit"
 
 # === Formatting === #
 [tool.black]

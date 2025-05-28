@@ -2,8 +2,19 @@
 QED-C Application-Oriented Benchmarks - Qiskit Version
 """
 
-from importlib import import_module
-import sys
+from qc_app_benchmarks.deutsch_jozsa.qiskit import dj_benchmark
+from qc_app_benchmarks.bernstein_vazirani.qiskit import bv_benchmark
+from qc_app_benchmarks.hidden_shift.qiskit import hs_benchmark
+from qc_app_benchmarks.quantum_fourier_transform.qiskit import qft_benchmark
+from qc_app_benchmarks.grovers.qiskit import grovers_benchmark
+from qc_app_benchmarks.phase_estimation.qiskit import pe_benchmark
+from qc_app_benchmarks.hhl.qiskit import hhl_benchmark
+from qc_app_benchmarks.amplitude_estimation.qiskit import ae_benchmark
+from qc_app_benchmarks.monte_carlo.qiskit import mc_benchmark
+from qc_app_benchmarks.hamiltonian_simulation.qiskit import hamiltonian_simulation_benchmark
+from qc_app_benchmarks.vqe.qiskit import vqe_benchmark
+from qc_app_benchmarks.shors.qiskit import shors_benchmark
+
 
 min_qubits = 2
 max_qubits = 8
@@ -21,7 +32,6 @@ provider_backend = None
 exec_options = {}
 
 # Deutsch-Jozsa
-dj_benchmark = import_module("deutsch-jozsa.qiskit.dj_benchmark")
 dj_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
@@ -37,8 +47,6 @@ dj_benchmark.run(
 )
 
 # Bernstein-Vazirani - Method 1
-sys.path.insert(1, "bernstein-vazirani/qiskit")
-bv_benchmark = import_module("bernstein-vazirani.qiskit.bv_benchmark")
 bv_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
@@ -71,8 +79,6 @@ bv_benchmark.run(
 )
 
 # Hidden Shift
-sys.path.insert(1, "hidden-shift/qiskit")
-hs_benchmark = import_module("hidden-shift.qiskit.hs_benchmark")
 hs_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
@@ -87,8 +93,6 @@ hs_benchmark.run(
 )
 
 # Quantum Fourier Transform - Method 1
-sys.path.insert(1, "quantum-fourier-transform/qiskit")
-qft_benchmark = import_module("quantum-fourier-transform.qiskit")
 qft_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
@@ -121,8 +125,6 @@ qft_benchmark.run(
 )
 
 # Grover
-sys.path.insert(1, "grovers/qiskit")
-grovers_benchmark = import_module("grovers.qiskit")
 grovers_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
@@ -138,8 +140,6 @@ grovers_benchmark.run(
 )
 
 # Phase Estimation
-sys.path.insert(1, "phase-estimation/qiskit")
-pe_benchmark = import_module("phase-estimation.qiskit")
 pe_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
@@ -155,9 +155,6 @@ pe_benchmark.run(
 )
 
 # HHL Linear Solver
-sys.path.insert(1, "hhl/qiskit")
-hhl_benchmark = import_module("hhl.qiskit")
-
 hhl_benchmark.verbose = False
 
 hhl_benchmark.run(
@@ -177,8 +174,6 @@ hhl_benchmark.run(
 )
 
 # Amplitude Estimation
-sys.path.insert(1, "amplitude-estimation/qiskit")
-ae_benchmark = import_module("amplitude-estimation.qiskit")
 ae_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
@@ -194,8 +189,6 @@ ae_benchmark.run(
 )
 
 # Monte Carlo
-sys.path.insert(1, "monte-carlo/qiskit")
-mc_benchmark = import_module("monte-carlo.qiskit")
 mc_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
@@ -211,8 +204,6 @@ mc_benchmark.run(
 )
 
 # Hamiltonian Simulation - Method 1
-sys.path.insert(1, "hamiltonian-simulation/qiskit")
-hamiltonian_simulation_benchmark = import_module("hamiltonian-simulation.qiskit")
 hamiltonian_simulation_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
@@ -245,8 +236,6 @@ hamiltonian_simulation_benchmark.run(
 )
 
 # VQE - Method 1
-sys.path.insert(1, "vqe/qiskit")
-vqe_benchmark = import_module("vqe.qiskit")
 vqe_num_shots = 4098
 vqe_benchmark.run(
     min_qubits=min_qubits,
@@ -263,8 +252,6 @@ vqe_benchmark.run(
 )
 
 # Shor - Method 1
-sys.path.insert(1, "shors/qiskit")
-shors_benchmark = import_module("shors.qiskit")
 shors_benchmark.run(
     min_qubits=min_qubits,
     max_qubits=max_qubits,
