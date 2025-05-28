@@ -39,7 +39,7 @@ import copy
 
 try:
     from qc_app_benchmarks.common import qcb_mpi as mpi
-except ImportError:
+except ModuleNotFoundError:
     import qcb_mpi as mpi
 
 # Raw and aggregate circuit metrics

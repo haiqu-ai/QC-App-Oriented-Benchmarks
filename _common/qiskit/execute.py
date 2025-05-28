@@ -45,7 +45,7 @@ from qiskit_aer.noise import depolarizing_error, reset_error
 # QED-C modules
 try:
     from qc_app_benchmarks.common import metrics
-except ImportError:
+except ModuleNotFoundError:
     import metrics
 
 ##########################

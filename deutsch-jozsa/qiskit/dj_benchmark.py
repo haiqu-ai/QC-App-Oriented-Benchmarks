@@ -11,7 +11,7 @@ from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
 try:
     from qc_app_benchmarks.common.qiskit import execute as ex
     from qc_app_benchmarks.common import metrics as metrics
-except ImportError:
+except ModuleNotFoundError:
     sys.path[1:1] = [ "_common", "_common/qiskit" ]
     sys.path[1:1] = [ "../../_common", "../../_common/qiskit" ]
     import execute as ex
