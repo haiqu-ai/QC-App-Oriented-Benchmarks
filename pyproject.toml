@@ -50,9 +50,11 @@ packages = [
     "qc_app_benchmarks.phase_estimation.qiskit",
     "qc_app_benchmarks.hhl.qiskit",
     "qc_app_benchmarks.amplitude_estimation.qiskit",
+    "qc_app_benchmarks.monte_carlo.common",
     "qc_app_benchmarks.monte_carlo.qiskit",
     "qc_app_benchmarks.hamiltonian_simulation.qiskit",
     "qc_app_benchmarks.vqe.qiskit",
+    "qc_app_benchmarks.shors.common",
     "qc_app_benchmarks.shors.qiskit"
 ]
 
@@ -66,9 +68,11 @@ packages = [
 "qc_app_benchmarks.phase_estimation.qiskit" = "phase-estimation/qiskit"
 "qc_app_benchmarks.hhl.qiskit" = "hhl/qiskit"
 "qc_app_benchmarks.amplitude_estimation.qiskit" = "amplitude-estimation/qiskit"
+"qc_app_benchmarks.monte_carlo.common" = "monte-carlo/_common"
 "qc_app_benchmarks.monte_carlo.qiskit" = "monte-carlo/qiskit"
 "qc_app_benchmarks.hamiltonian_simulation.qiskit" = "hamiltonian-simulation/qiskit"
 "qc_app_benchmarks.vqe.qiskit" = "vqe/qiskit"
+"qc_app_benchmarks.shors.common" = "shors/_common"
 "qc_app_benchmarks.shors.qiskit" = "shors/qiskit"
 
 # === Formatting === #
