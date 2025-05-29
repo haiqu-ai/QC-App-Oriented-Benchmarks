@@ -42,6 +42,7 @@ zip-safe = false
 include-package-data = true
 packages = [
     "qc_app_benchmarks.common",
+    "qc_app_benchmarks.common.qiskit",
     "qc_app_benchmarks.deutsch_jozsa.qiskit",
     "qc_app_benchmarks.bernstein_vazirani.qiskit",
     "qc_app_benchmarks.hidden_shift.qiskit",
@@ -60,6 +61,7 @@ packages = [
 
 [tool.setuptools.package-dir]
 "qc_app_benchmarks.common" = "_common"
+"qc_app_benchmarks.common.qiskit" = "_common/qiskit"
 "qc_app_benchmarks.deutsch_jozsa.qiskit" = "deutsch-jozsa/qiskit"
 "qc_app_benchmarks.bernstein_vazirani.qiskit" = "bernstein-vazirani/qiskit"
 "qc_app_benchmarks.hidden_shift.qiskit" = "hidden-shift/qiskit"
