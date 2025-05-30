@@ -81,6 +81,7 @@ packages = [
 
 [tool.setuptools.package-data]
 "qc_app_benchmarks.hamiltonian_simulation._common" = ["*.json"]
+"qc_app_benchmarks.vqe.qiskit" = ["ansatzes/*.txt", "Hamiltonians/*.txt"]
 
 # === Formatting === #
 [tool.black]
